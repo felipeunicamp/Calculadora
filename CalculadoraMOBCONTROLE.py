@@ -3,7 +3,7 @@ import numpy as np
 import locale
 
 #st.set_page_config(layout='wide')
-locale.setlocale(locale.LC_ALL,'pt_BR.UTF-8')
+#locale.setlocale(locale.LC_ALL,'pt_BR.UTF-8')
 st.title('Calculadora - MOB Controle')
 
 
@@ -21,16 +21,16 @@ if botao:
         ganho_financeiro_mensal = ganho_financeiro_diário * 30
         ganho_financeiro_anual = ganho_financeiro_mensal * 12
         ganho_horas_formatado = locale.format_string('%d', ganho_horas, grouping=True)
-        ganho_financeiro_diário_formatado = locale.format_string('%d', ganho_financeiro_diário, grouping=True)
-        ganho_financeiro_mensal_formatado = locale.format_string('%d', ganho_financeiro_mensal, grouping=True)
-        ganho_financeiro_anual_formatado = locale.format_string('%d', ganho_financeiro_anual, grouping=True)
+        #ganho_financeiro_diário_formatado = locale.format_string('%d', ganho_financeiro_diário, grouping=True)
+        #ganho_financeiro_mensal_formatado = locale.format_string('%d', ganho_financeiro_mensal, grouping=True)
+        #ganho_financeiro_anual_formatado = locale.format_string('%d', ganho_financeiro_anual, grouping=True)
 
         st.text(f'Ganho de tempo diário é de {ganho_horas:.2f} horas.')
-        st.text(f'Ganho financeiro diário é de R${ganho_financeiro_diário_formatado}.')
-        st.text(f'Ganho financeiro mensal é de R${ganho_financeiro_mensal_formatado}.')
-        st.text(f'Ganho financeiro anual é de R${ganho_financeiro_anual_formatado}.')
+        st.text(f'Ganho financeiro diário é de R${ganho_financeiro_diário:.2f}.')
+        st.text(f'Ganho financeiro mensal é de R${ganho_financeiro_mensal:.2f}.')
+        st.text(f'Ganho financeiro anual é de R${ganho_financeiro_anual:.2f}.')
     else:
         st.text('Por favor, insira valores válidos.')
 else:
     st.text('Por favor, insira valores nos campos acima.')
-st.image(r'C:\Users\felipe.goncalves\PycharmProjects\opencv\.venv\MOB_Controle.png')
+st.image('MOB_Controle.png')
