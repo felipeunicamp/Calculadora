@@ -4,6 +4,8 @@ import locale
 
 #st.set_page_config(layout='wide')
 #locale.setlocale(locale.LC_ALL,'pt_BR.UTF-8')
+def formatar_dinheiro(valor):
+    return f"R${valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 st.title('Calculadora - MOB Controle')
 
 
@@ -21,9 +23,9 @@ if botao:
         ganho_financeiro_mensal = ganho_financeiro_diário * 30
         ganho_financeiro_anual = ganho_financeiro_mensal * 12
         ganho_horas_formatado = locale.format_string('%d', ganho_horas, grouping=True)
-        #ganho_financeiro_diário_formatado = locale.format_string('%d', ganho_financeiro_diário, grouping=True)
-        #ganho_financeiro_mensal_formatado = locale.format_string('%d', ganho_financeiro_mensal, grouping=True)
-        #ganho_financeiro_anual_formatado = locale.format_string('%d', ganho_financeiro_anual, grouping=True)
+        ganho_financeiro_diário_formatado = formatar_dinheiro(ganho_financeiro_diário)
+        ganho_financeiro_mensal_formatado = formatar_dinheiro(ganho_financeiro_mensal)
+        ganho_financeiro_anual_formatado = formatar_dinheiro(ganho_financeiro_anual)
 
         st.text(f'Ganho de tempo diário é de {ganho_horas:.2f} horas.')
         st.text(f'Ganho financeiro diário é de R${ganho_financeiro_diário:.2f}.')
