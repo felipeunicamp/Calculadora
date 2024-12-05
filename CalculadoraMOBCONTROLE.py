@@ -22,15 +22,15 @@ if botao:
         ganho_financeiro_diário = ((vl3 + (vl3 / 2)) / 30) * ganho_horas
         ganho_financeiro_mensal = ganho_financeiro_diário * 30
         ganho_financeiro_anual = ganho_financeiro_mensal * 12
-        ganho_horas_formatado = locale.format_string('%d', ganho_horas, grouping=True)
+        #ganho_horas_formatado = locale.format_string('%d', ganho_horas, grouping=True)
         ganho_financeiro_diário_formatado = formatar_dinheiro(ganho_financeiro_diário)
         ganho_financeiro_mensal_formatado = formatar_dinheiro(ganho_financeiro_mensal)
         ganho_financeiro_anual_formatado = formatar_dinheiro(ganho_financeiro_anual)
 
         st.text(f'Ganho de tempo diário é de {ganho_horas:.2f} horas.')
-        st.text(f'Ganho financeiro diário é de R${ganho_financeiro_diário:.2f}.')
-        st.text(f'Ganho financeiro mensal é de R${ganho_financeiro_mensal:.2f}.')
-        st.text(f'Ganho financeiro anual é de R${ganho_financeiro_anual:.2f}.')
+        st.text(f'Ganho financeiro diário é de {ganho_financeiro_diário_formatado}.')
+        st.text(f'Ganho financeiro mensal é de {ganho_financeiro_mensal_formatado}.')
+        st.text(f'Ganho financeiro anual é de {ganho_financeiro_anual_formatado}.')
     else:
         st.text('Por favor, insira valores válidos.')
 else:
