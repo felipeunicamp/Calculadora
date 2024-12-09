@@ -59,7 +59,7 @@ with aba2:
     st.text('Qual o custo mensal do m² do estoque?')
     vl10 = st.number_input('A média no mercado é de 20 a 40 reais. Se for R$30,00, digite 30.')
     st.text('Qual o custo de movimentação de estoque?')
-    vl11 = st.number_input('A média no mercado é de "R$3,50". Ex: Se for "R$3,50", digite 3,50')
+    vl11 = st.number_input('A média no mercado é de R$3.50. Ex: Se for R$3.50, digite 3,50')
     st.text('Quantos EPIs são entregues por dia?')
     vl12 = st.number_input('Digite o número de EPIs entregues diariamente. Ex: Se forem 100 EPIs, digite 100')
     st.text('Quanto se perde de EPI por ano devido à deterioração?')
