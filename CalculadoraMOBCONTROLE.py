@@ -91,7 +91,7 @@ with aba2:
         st.text(f'O custo mensal com colaborador é de {custo_total_colaborador_mensal_formatado}.')
         st.text(f'O custo anual com colaborador é de {custo_total_colaborador_anual_formatado}.')
         st.text(f'O custo anual com estoque de EPI é de {custo_total_estoque_ano_formatado}.')
-        st.text(f'O custo total anual para compra e armazenamento de EPI é de {custo_total_empresa_epi_formatado}.')
+        st.text(f'O custo total anual com equipe e infraestrutura para compra e armazenamento de EPI é de {custo_total_empresa_epi_formatado}.')
     else:
         st.text('Por favor, insira valores nos campos acima.')
     
